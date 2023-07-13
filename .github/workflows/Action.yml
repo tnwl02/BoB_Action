@@ -20,4 +20,4 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
-        run: python -c "import sys; print(sys.version) > python_version.txt"
+        run: python -c "import sys; print(sys.version)" > python_version_${{ matrix.python-version }}.txt
